@@ -26,3 +26,153 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.search-container {
+  display: flex;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 15px 20px;
+  background: #222;
+  border: 2px solid #333;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.search-container input:focus {
+  border-color: #f5576c;
+}
+
+.search-container button {
+  padding: 15px 35px;
+  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.search-container button:hover {
+  transform: translateY(-2px);
+}
+
+.search-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  text-align: center;
+  color: #f5576c;
+  background: rgba(245, 87, 108, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  font-size: 1.2rem;
+  margin-top: 60px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-info {
+  padding: 20px;
+}
+
+.movie-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-info .year {
+  color: #999;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.movie-info .type {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(245, 87, 108, 0.2);
+  color: #f5576c;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .movie-card img {
+    height: 225px;
+  }
+
+  .movie-info h3 {
+    font-size: 1rem;
+  }
+}
