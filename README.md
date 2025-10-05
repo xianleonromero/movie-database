@@ -1,16 +1,66 @@
-# React + Vite
+# Movie Database
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**🔗 [Ver demo en vivo](https://movie-database-kyrgw6wgf-xianleonromeros-projects.vercel.app)**
 
-Currently, two official plugins are available:
+Aplicación de búsqueda de películas desarrollada con React y Vite. Utiliza la API de OMDb para mostrar información de películas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## React Compiler
+- Búsqueda de películas en tiempo real
+- Visualización en grid responsive
+- Información de título, año y tipo
+- Pósters de películas
+- Manejo de errores
+- Diseño moderno tipo Netflix
+- Responsive design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- **React** - Librería de JavaScript para interfaces de usuario
+- **Vite** - Build tool y servidor de desarrollo
+- **OMDb API** - API de base de datos de películas
+- **CSS3** - Estilos y animaciones
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Instalación
+
+1. Clona el repositorio:
+
+git clone https://github.com/xianleonromero/movie-database.git
+cd movie-database
+
+2. Instala las dependencias:
+
+npm install
+
+3. Configura tu API Key de OMDb:
+   - Obtén tu clave gratuita en [OMDb API](http://www.omdbapi.com/apikey.aspx)
+   - Reemplaza `API_KEY` en `src/App.jsx` con tu clave
+
+4. Inicia el servidor de desarrollo:
+
+npm run dev
+
+5. Abre [http://localhost:5173](http://localhost:5173) en tu navegador
+
+## Uso
+
+1. Escribe el nombre de una película en el buscador
+2. Presiona Enter o haz clic en "Buscar"
+3. Explora los resultados en el grid
+
+## Scripts disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Construye la app para producción
+- `npm run preview` - Previsualiza el build de producción
+
+## Autor
+
+**Xián León Romero**
+- GitHub: [@xianleonromero](https://github.com/xianleonromero)
+- Email: leonromeroxian@gmail.com
+- LinkedIn: [Xián León Romero](https://www.linkedin.com/in/xián-león-romero-7a57b7352/)
+
+## Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
